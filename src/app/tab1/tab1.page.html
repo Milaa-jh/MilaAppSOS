@@ -1,17 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="emergency-title">Emergencia Duoc UC</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="dark" class="ion-padding">
+  <div class="sos-container">
+    <ion-button 
+      (click)="onSOSClick()" 
+      class="sos-button" 
+      expand="block"
+      color="danger">
+      Boton SOS
+    </ion-button>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-footer class="ion-no-border footer-nav">
+    <ion-toolbar color="dark">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-button fill="clear" color="danger" (click)="onSOSClick()">
+              <div class="nav-button-content">
+                <ion-icon name="alert-circle-outline"></ion-icon>
+                <div>Boton SOS</div>
+              </div>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button fill="clear" color="light" (click)="onChatClick()">
+              <div class="nav-button-content">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+                <div>Chat</div>
+              </div>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button fill="clear" color="light" (click)="onContactClick()">
+              <div class="nav-button-content">
+                <ion-icon name="person-outline"></ion-icon>
+                <div>Contacto</div>
+              </div>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button fill="clear" color="light" (click)="onLocationClick()">
+              <div class="nav-button-content">
+                <ion-icon name="location-outline"></ion-icon>
+                <div>Localizacion</div>
+              </div>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
